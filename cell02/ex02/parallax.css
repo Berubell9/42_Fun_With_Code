@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+}
+
+.p1 h1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: rgb(0, 0, 0);
+}
+.p1 {
+    background-image: url(https://criticalhits.com.br/wp-content/uploads/2022/06/anya-forger-2.webp);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.p2 h1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+}
+.p2{
+    background-color: black;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+.p3 h1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: rgb(0, 0, 0);
+
+}
+.p3 {
+    background-image: url(https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/09/imgonline-com-ua-resize-RkdKA5DE8qbR.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

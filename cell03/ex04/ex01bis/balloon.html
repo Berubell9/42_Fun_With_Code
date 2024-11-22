@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<style>
+        body{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+		.ball{
+            background-color: #C21010;
+            color: black;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            
+        }
+	</style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="button" class="ball"></div>
+
+    <script type="text/javascript">
+        var x = 200;
+        var color = ["#C21010","#72D559","#35439c"]
+        var i = 0;
+        $(document).ready(function() {
+            $('#button').click(function() {
+                i += 1;
+                if(x < 421 || x == 200){
+                    $(this).css({
+                        height: (x + 10) + "px",
+                        width: (x + 10) + "px"
+                    });
+                    x += 10;
+                }
+                if (x > 420) {
+                    x = 200;
+                    i = 0;
+                    $(this).css({
+                        height: 200 + "px",
+                        width: 200 + "px"
+                    });
+                    $('#button').css('background-color', color[i]);
+                }
+
+                if (i <= 2) {
+                    $(this).css('background-color', color[i]);
+                } 
+                else {
+                    i = 0;
+                    $(this).css('background-color', color[i]);
+                }
+            });
+
+            $('#button').on('mouseout', function() {
+                i -= 1;
+                if (x > 200) {
+                    $(this).css({
+                        height: (x - 5) + "px",
+                        width: (x - 5) + "px"
+                    });
+                    x -= 5;
+                }
+                else if(x <= 200){
+                    x = 200;
+                    $(this).css({
+                        height: 200 + "px",
+                        width: 200 + "px"
+                    });
+                }
+
+                if (i >= 0) {
+                    $(this).css('background-color', color[i]);
+                } 
+                else {
+                    i = 2;
+                    $(this).css('background-color', color[i]);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
